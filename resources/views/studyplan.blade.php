@@ -28,10 +28,12 @@
         <div class="col-md-7 grid-margin stretch-card">
                   <div class="card">
                     <div class="card-body">
-                      <h4 class="card-title">Major</h4>
-                      <p>Semester : 4</p><br>
+                      @foreach($student as $student)
+                      <h4 class="card-title">{{$student->majorid}}</h4>
+                      <p>Semester : {{$student->semester}}</p><br>
                       <div class="card-description">
-                      <button type="button" class="btn btn-primary btn-rounded" href="addplan">Add Study Plan</button>
+                      <a class="nav-link"  href="addplan"><button type="input" class="btn btn-primary btn-rounded">Add Study Plan</button></a>
+                        @endforeach
                       </div>
                     </div>
                   </div>
@@ -50,16 +52,18 @@
                             <th>Course</th>
                             <th>day</th>
                             <th>sem</th>
+                            <th>Lectures</th>
                           </tr>
                         </thead>
                         <tbody>
 
                         @foreach ($data as $data)
                           <tr>
-                            <td>{{$data->class}}</td>
+                            <td>{{$data->classid}}</td>
                             <td>{{$data->cname}}</td>
                             <td>{{$data->day}}</td>
                             <td>{{$data->sem}}</td>
+                            <td>{{$data->lname}}</td>
                          @endforeach
                             <td></td>
                           </tr>

@@ -14,4 +14,5 @@ class studyplan extends Model
         'classid',
         'studentid'
     ];
+    public $timestamps = false;
 }

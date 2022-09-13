@@ -15,4 +15,9 @@ class courseclass extends Model
         'lectid',
         'day'
     ];
+
+    public function major()
+    {
+        return $this->belongsTo(major::class);
+    }
 }

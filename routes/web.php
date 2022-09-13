@@ -21,7 +21,9 @@ Route::get('/redirects',[HomeController::class,"redirects"]);
 
 Route::get('/studyplan',[HomeController::class,"studyplan"]);
 
-Route::get('/addplan',[HomeController::class,"studentplan"]);
+Route::get('/addplan',[HomeController::class,"addplan"]);
+
+Route::get("/updateplan/{classid}",[HomeController::class,"updateplan"]);
 
 Route::get('/studentdata',[adminController::class,"studentdata"]);
 
